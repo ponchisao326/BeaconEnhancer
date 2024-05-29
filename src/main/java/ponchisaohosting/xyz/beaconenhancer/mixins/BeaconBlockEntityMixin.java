@@ -37,7 +37,6 @@ public abstract class BeaconBlockEntityMixin {
 
     private static int calculateCustomLevel(World world, int x, int y, int z) {
         // Lógica para calcular el nivel del beacon basado en un radio personalizado
-        // Puedes ajustar esta lógica según tus necesidades
         int customLevel = 1;
         double customRadius = 1000.0; // Radio personalizado
         for (int level = 1; level <= 4; level++) {
