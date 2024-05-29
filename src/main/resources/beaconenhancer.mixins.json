@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ponchisaohosting.xyz.beaconenhancer.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BeaconBlockEntityMixin",
+    "IBeaconBlockEntity"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

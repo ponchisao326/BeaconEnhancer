@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "beaconenhancer",
+  "version": "${version}",
+  "name": "BeaconEnhancer",
+  "description": "A simple mod that let you amplify the beacon range by using a nether star",
+  "authors": [
+    "Ponchisao326"
+  ],
+  "contact": {
+    "website": "ponchisaohosting.xyz",
+    "repo": "https://github.com/ponchisao326/BeaconEnhancer"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/beaconenhancer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "ponchisaohosting.xyz.beaconenhancer.client.BeaconEnhancerClient"
+    ],
+    "main": [
+      "ponchisaohosting.xyz.beaconenhancer.BeaconEnhancer"
+    ]
+  },
+  "mixins": [
+    "beaconenhancer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
