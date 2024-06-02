@@ -16,5 +16,4 @@ public interface IBeaconBlockEntity {
 
     @Accessor("secondary")
     StatusEffect secondary();
-
 }

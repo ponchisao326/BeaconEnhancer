@@ -16,6 +16,21 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+    maven {
+        url = 'https://libraries.minecraft.net/'
+    }
+    maven {
+        url = 'https://mvnrepository.com/artifact/com.mojang/brigadier/'
+    }
+    maven {
+        url = 'https://repo1.maven.org/maven2/'
+    }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -26,6 +41,9 @@ dependencies {
 
         // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation group: 'com.mojang', name: 'brigadier', version: '1.0.18'
+    implementation 'com.github.piegamesde:nbt:3.0.1'
     }
 
 processResources {
@@ -85,4 +103,8 @@ publishing {
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
     }
+}
+
+fabricApi {
+    configureDataGeneration()
 }
